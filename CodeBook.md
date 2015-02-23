@@ -17,9 +17,9 @@ With **data.test** and **data.train**, I merge them by rows into the **data** da
 At the end of this step, I have one dataset variable, **data**, which contain all information from files. This data frame contains 263 columns:
 
 DATA columns
-[1] - Subject
-[2] - Activity (class code at this point)
-[3-263] - Features
+- [1] - Subject
+- [2] - Activity (class code at this point)
+- [3-263] - Features
 
 
 ## STEP 2. Extracts only the measurements on the mean and standard deviation for each measurement.
@@ -31,9 +31,9 @@ The position of any row feature found matching the criteria would be in the rang
 At the end of this step, I have one more data set, **seldata**, which contain only the subject, activity and features data matching the criteria indicated in the project instructions.
 
 SELDATA columns
-[1] - Subject
-[2] - Activity (class code at this point)
-[3-68] - Features
+- [1] - Subject
+- [2] - Activity (class code at this point)
+- [3-68] - Features
 
 
 ## STEP 3. Uses descriptive activity names to name the activities in the data set.
@@ -43,9 +43,9 @@ In this step, I read the activity labels file into a dataset. At this point, the
 At the end of this step, **seldata** contains only the subject, activity and features data matching the criteria indicated in the project instructions.
 
 SELDATA columns
-[1] - Subject
-[2] - Activity (labels at this point)
-[3-68] - Features
+- [1] - Subject
+- [2] - Activity (labels at this point)
+- [3-68] - Features
 
 
 ## STEP 4. Appropriately labels the data set with descriptive variable names.
