@@ -25,9 +25,6 @@ subject.test <- read.table(paste(filepath,"subject_test.txt",sep=""))
 y.test <- read.table(paste(filepath,"y_test.txt",sep=""))
 x.test <- read.table(paste(filepath,"X_test.txt",sep=""))
 data.test <- data.frame(subject.test, y.test, x.test)
-rm(subject.test)
-rm(y.test)
-rm(x.test)
 
 ## Creates a dataset from training data  
 filepath <- "UCI HAR Dataset/train/"
@@ -35,15 +32,10 @@ subject.train <- read.table(paste(filepath,"subject_train.txt",sep=""))
 y.train <- read.table(paste(filepath,"y_train.txt",sep=""))
 x.train <- read.table(paste(filepath,"X_train.txt",sep=""))
 data.train <- data.frame(subject.train, y.train, x.train)
-rm(subject.train)
-rm(y.train)
-rm(x.train)
 
 ## Combines test and train into just one dataset
 
 data <- rbind(data.test, data.train)
-rm(data.test)
-rm(data.train)
 
 
 ##
@@ -77,8 +69,6 @@ act.labels <- read.table(paste(filepath,"activity_labels.txt",sep=""),
 
 ## Column 2 contains the class code for activity
 seldata[,2] <- act.labels$Name[match(seldata[,2],act.labels$Class)]
-rm(act.labels)
-rm(data)
 
 
 ##
@@ -87,7 +77,6 @@ rm(data)
 
 ## Assign proper names to variables
 names(seldata) <- c("Subject","Activity",features$Name[fcols])
-rm(features)
 
 
 ##
